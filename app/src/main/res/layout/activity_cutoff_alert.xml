@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/oops"
+        android:textSize="19sp"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:background="@color/white"
+        android:gravity="center"
+        android:id="@+id/textView4"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@color/white"
+        android:text="@string/it_looks_like_you_re_trying_to_submit_a_report_outside_the_scheduled_monitoring_hours_of"/>
+
+    <TextView
+        android:id="@+id/tv_mon_hours"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="19sp"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@color/white"
+        android:text="10:45 AM - 3PM  Mon-Fri"/>
+
+    <TextView
+        android:id="@+id/tv_911_disclaimer"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@color/white"
+        android:text="If this is an emergency, please call 911"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@color/white"
+        android:text="@string/otherwise_please_submit_your_report_during_the_next_scheduled_monitoring_time"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="19sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="@color/white"
+        android:text="@string/thank_you"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_oops"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:cropToPadding="false"
+        android:scaleType="center"
+        app:borderWidth="0dp"
+        android:elevation="6dp"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/ic_red_phone"/>
+</LinearLayout>

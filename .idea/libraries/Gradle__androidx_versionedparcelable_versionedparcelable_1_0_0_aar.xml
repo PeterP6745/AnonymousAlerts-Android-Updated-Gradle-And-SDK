@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.versionedparcelable:versionedparcelable:1.0.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/d7dbd65f6f33b4ee48e551216f38d0ce/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/124fbfe0c5821c24eb6fe1bf2c25fc58/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d5731e32bcc3ddd48e7bb79f200a6201/versionedparcelable-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b7f1d1ff5d21384ada3bf31d820cea29/versionedparcelable-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c336e2cc9d39ea214ae8c5949e17b66/versionedparcelable-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0e7abdd5d8d49bfd865a05c413d38239/versionedparcelable-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c6debf48d1ab071d75715b4f93abf06a/versionedparcelable-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bd5391501cfbfcadccc18fa52e1079a0/transformed/versionedparcelable-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/22c0a20b504044ff2e2d71c23ea1fd9a/transformed/versionedparcelable-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5f3af609f13da5e81ff73cd1fccca4ad/transformed/versionedparcelable-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/64d364107fa1a117795e512448402640/transformed/versionedparcelable-1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b9d75079678291440454fa88087bab37/transformed/versionedparcelable-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b9d75079678291440454fa88087bab37/transformed/versionedparcelable-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b9d75079678291440454fa88087bab37/transformed/versionedparcelable-1.0.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.versionedparcelable/versionedparcelable/1.0.0/df4c3c5d517f6a49017612e6b4dfdd007e7cc9b8/versionedparcelable-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-iid:15.1.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.1.0.aar/ca106aad51ca634e86e77a475d53fb1a/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.1.0.aar/3f939a3552cdd1419c8e32422cabdea5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-15.1.0.aar/9ca120cbcb9e961d241dce5e6b616444/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5c1a8da433041412b37e378fd1ceb665/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/06385a7b3156080212cb2cf4c99d610f/jetified-firebase-iid-15.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a653898397b20994c9e541048a96b08/jetified-firebase-iid-15.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8e2283729122391e3b8b2ad62f6753f7/jetified-firebase-iid-15.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f91d9463d69e0be506ce120bf919ab40/jetified-firebase-iid-15.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f06eab0453d0a3219ecb1638f1fee37/jetified-firebase-iid-15.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/425ad7c8215462c784a7f27f65b29551/transformed/jetified-firebase-iid-15.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/69df22974d6ef15fdda6c8097871f469/transformed/jetified-firebase-iid-15.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/25fcfaa97fda1f806422e296b889774a/transformed/jetified-firebase-iid-15.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/03ff9c03b2b69c24996c5d5462ab3d42/transformed/jetified-firebase-iid-15.1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/62b33a3d553df9819237b0fb2ee24892/transformed/jetified-firebase-iid-15.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/62b33a3d553df9819237b0fb2ee24892/transformed/jetified-firebase-iid-15.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/62b33a3d553df9819237b0fb2ee24892/transformed/jetified-firebase-iid-15.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

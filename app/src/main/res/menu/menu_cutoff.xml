@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item-->
+    <!--android:id="@+id/action_settings"-->
+    <!--android:orderInCategory="100"-->
+    <!--android:showAsAction="never"-->
+    <!--android:title="@string/action_settings" />-->
+
+
+
+    <item
+        android:id="@+id/action_done"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="@string/done" />
+
+
+    <!--<item-->
+    <!--android:id="@+id/action_change_language"-->
+    <!--android:orderInCategory="60"-->
+    <!--android:title="@string/language_setting"-->
+    <!--android:showAsAction="never"/>-->
+
+</menu>

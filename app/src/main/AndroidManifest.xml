@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.messagelogix.anonymousalerts"
+    android:windowSoftInputMode="stateHidden">
+
+    <!--
+    Anonymous Alerts Permissions
+    One needs to be careful adding permission as Android market will filter out the apps on devices
+    that do not match criteria, when that happens there is no way to tell which permission caused it
+    Always use android:required="false" unless you really cannot
+    -->
+
+    <!-- Google Maps Android API -->
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:required="false" />
+
+    <!-- phone permission -->
+    <!--<uses-permission android:name="android.permission.CALL_PHONE" android:required="false"/>-->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--<uses-permission-->
+        <!--android:name="android.permission.READ_CONTACTS"-->
+        <!--android:required="false" />-->
+
+    <!-- GCM Permissions android:exported="false" -->
+    <!--<uses-permission android:name="android.permission.GET_ACCOUNTS" />-->
+<!--    <uses-permission android:name="android.permission.WAKE_LOCK" />-->
+<!--    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />-->
+<!--    <uses-permission android:name="com.messagelogix.anonymousalerts.permission.C2D_MESSAGE" />-->
+
+    <!-- Special Permissions -->
+<!--    <permission-->
+<!--        android:name="com.messagelogix.anonymousalerts.permission.C2D_MESSAGE"-->
+<!--        android:protectionLevel="signature" />-->
+    <!--<uses-permission android:name="android.permission.SET_DEBUG_APP" android:required="false" />-->
+
+    <!-- we removed this feature for now no more capturing video/image -->
+    <!--<uses-feature android:name="android.hardware.camera" android:required="false" />-->
+    <!--<uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />-->
+    <!--<uses-permission android:name="android.permission.CAMERA" android:required="false"/>-->
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:required="false" />
+<!--    android:maxSdkVersion="18"-->
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        android:name="androidx.multidex.MultiDexApplication">
+
+        <activity android:name=".activities.VictimAccusedActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+                  android:windowSoftInputMode="adjustPan"
+                  android:label="@string/add_victim_accused_plain"
+            />
+
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher" />
+
+        <service
+            android:name=".services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+<!--        <receiver-->
+<!--            android:name=".services.GcmBroadcastReceiver"-->
+<!--            android:permission="com.google.android.c2dm.permission.SEND"-->
+<!--            >-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+
+<!--                <category android:name="com.messagelogix.anonymousalerts" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+<!--        <service android:name=".services.GcmIntentService" />-->
+        <service android:name=".services.CountDownTimerService" />
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activities.MenuActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:configChanges="orientation"
+            android:label="@string/home"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.OopsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:windowSoftInputMode="adjustPan"
+            android:label="Anonymous Alerts®"
+            />
+        <activity
+            android:name=".activities.OffHoursActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:windowSoftInputMode="adjustPan"
+            android:label="Anonymous Alerts®"
+            />
+        <activity
+            android:name=".activities.EmergencyDialTwoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            />
+
+        <activity
+            android:name=".activities.ConfirmCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:label="@string/report_sent"
+            />
+
+        <activity
+            android:name=".activities.GlossaryActivity"
+            android:label="@string/title_activity_glossary"/>
+
+        <activity android:name=".activities.StandardLiteReportActivity"
+                  android:label="@string/submit_report"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".activities.NonAnonLiteReportActivity"
+            android:label="@string/submit_report"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activities.SendReport1Activity"
+            android:label="@string/title_activity_send_report1"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activities.SendReport2Activity"
+            android:label="@string/title_activity_send_report2"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.SendReport3Activity"
+            android:label="@string/title_activity_send_report3"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.CameraActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_photo"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.UploadActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_photo"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="SHOW_CHAT_MESSAGE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MessageCenterActivity"
+            android:label="@string/message_center"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".activities.ChatActivity"
+            android:label="@string/message_center"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:icon="@drawable/ic_search_white_36dp"
+            android:name=".activities.GlossaryDetailActivity"
+            android:label="@string/title_activity_glossary_detail"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.NotificationsActivity"
+            android:icon="@drawable/ic_warning_white_36dp"
+            android:label="@string/title_activity_notifications"/>
+        <activity
+            android:icon="@drawable/ic_warning_white_36dp"
+            android:name=".activities.NotificationsDetailActivity"
+            android:label="@string/title_activity_notifications_detail"/>
+        <activity
+            android:icon="@drawable/ic_adjust_white_36dp"
+            android:name=".activities.SmartButtonActivity"
+            android:label="@string/title_activity_locator"/>
+        <activity
+            android:icon="@drawable/ic_person_outline_white"
+            android:name=".activities.SmartButtonEditActivity"
+            android:label="@string/title_activity_locate_me_edit"/>
+        <activity
+            android:icon="@drawable/ic_person_outline_white"
+            android:name=".activities.SmartButtonContactActivity"
+            android:label="@string/title_activity_locate_me_contact"/>
+        <activity
+            android:icon="@drawable/ic_phone_white_36dp"
+            android:name=".activities.EmergencyDialActivity"
+            android:label="@string/title_activity_emergency_dial"/>
+        <activity
+            android:name=".activities.HelpActivity"
+            android:icon="@drawable/ic_help_white_36dp"
+            android:label="@string/title_activity_help"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:icon="@drawable/ic_link_white_36dp"
+            android:label="@string/title_activity_help"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.TextActivity"
+            android:label="@string/title_activity_text"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:icon="@drawable/ic_video_library_white_36dp"
+            android:name=".activities.VideoActivity"
+            android:label="@string/title_activity_video"/>
+        <activity
+            android:name=".activities.YoutubeActivity"
+            android:label="@string/title_activity_youtube"
+            android:screenOrientation="landscape" >
+        </activity>
+    </application>
+
+</manifest>

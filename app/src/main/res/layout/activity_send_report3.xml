@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/light_gray_bg"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    >
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:max="100"
+        android:progress="100"
+        android:progressTint="@color/btn_green"
+        android:progressBackgroundTint="@color/red"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        />
+
+
+    <ImageView
+        android:id="@+id/tvwSadSmiley"
+        android:layout_margin="7dp"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@drawable/ic_mood_black_48dp"
+        android:backgroundTint="#FFC400"
+        />
+
+    <TextView
+        android:id="@+id/confirmation_code_text_view_step_3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmation Code: 12345"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:gravity="start"
+        android:textColor="@color/red"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/step3TextView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:text="@string/Help_text_final"
+        />
+
+    <TextView
+        android:id="@+id/step3TextView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submitter_textView"
+        android:textSize="16sp"
+        android:text="@string/notice"
+        android:layout_marginTop="7dp"
+        />
+
+    <Spinner
+        android:id="@+id/phoneSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:background="#fdfdcb"
+        android:visibility="gone"
+        />
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:layout_marginTop="7dp"
+        >
+
+    </TableRow>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TextView
+            android:id="@+id/phoneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_format"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/Callbtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:text="@string/callbtn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="#FF088F53"
+            android:background="@drawable/green_button2"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/Donebtn"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FF088F53"
+        android:text="@string/done"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/green_button2"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

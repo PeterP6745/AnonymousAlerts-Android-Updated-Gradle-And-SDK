@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/light_gray_bg"
+    >
+
+    <LinearLayout
+        android:id="@+id/Step1Layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@color/light_gray_bg"
+        >
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:max="100"
+            android:progress="33"
+            android:progressTint="@color/btn_green"
+            android:progressBackgroundTint="@color/red"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            />
+
+        <TextView
+            android:id="@+id/InstructionTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:gravity="left"
+            android:lines="4"
+            android:maxLines="4"
+            android:text="@string/Instruction"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/submitter_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submitter"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic"
+            android:layout_marginLeft="10dp"
+            android:textColor="#088f53" />
+
+        <Spinner
+            android:layout_marginTop="5dp"
+            android:id="@+id/SubmitterSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_submitter_bg" />
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/building_type_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/school_type_colon"
+            android:textColor="#088f53"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:layout_marginTop="5dp"
+            android:id="@+id/BuildingTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_building_type_bg"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/building_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/building"
+            android:textColor="#088f53"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic"
+            android:layout_marginLeft="10dp" />
+
+        <Spinner
+            android:layout_marginTop="5dp"
+            android:id="@+id/BuildingSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_building_bg" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/add_vic_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Victim/Accused"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic"
+            android:visibility="visible"
+            android:layout_marginLeft="10dp"
+            android:textColor="#088f53" />
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:id="@+id/AddVictimButton"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/bg_button_add_vic_step1"
+            android:text="@string/add_victim_accused"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/contact_textView"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp" />
+
+        <Spinner
+            android:layout_marginTop="5dp"
+            android:id="@+id/ContactSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/contact_prompt"
+            android:spinnerMode="dropdown"
+            android:visibility="gone"
+            android:background="@drawable/spinner_contact_bg"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/incident_textView"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/incident"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp" />
+
+        <Spinner
+            android:layout_marginTop="5dp"
+            android:id="@+id/IncidentSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/spinner_incident_bg"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/location_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic"
+            android:visibility="visible"
+            android:layout_marginLeft="10dp"
+            android:textColor="#088f53" />
+
+        <Spinner
+            android:layout_marginTop="5dp"
+            android:id="@+id/LocationSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_location_bg" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/priority_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/priority"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic"
+            android:layout_marginLeft="10dp"
+            android:textColor="#088f53" />
+
+        <Spinner
+            android:layout_marginTop="5dp"
+            android:id="@+id/prioritySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:entries="@array/priority_arrays"
+            android:prompt="@string/priority_prompt"
+            android:spinnerMode="dialog"
+            android:background="@drawable/spinner_priority_step1" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/message_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic"
+            android:textColor="#088f53"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/messageToSend"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:hint="@string/messageToSend"
+            android:scrollHorizontally="false"
+            android:imeOptions="actionDone"
+            android:background="@drawable/bg_bordered_text"
+            android:textIsSelectable="false"
+            android:maxLength="350"/>
+
+        <LinearLayout
+            android:id="@+id/anonymousToggleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_step1_anonymous_toggle_active"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remain Anonymous"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/anonymous_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:checked="true"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="177dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/submit_buttonpng01"
+            android:textStyle="bold" />
+
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="#FFFFFF"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/aa_newlogo" />
+
+    <TextView
+        android:id="@+id/account_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:text="@string/account"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/hours_of_op"
+        android:layout_above="@id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text=""
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_above="@id/hours_of_op"
+        android:layout_below="@+id/account_textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="23.92"
+
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/SendIncidentLiteBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/button1"
+                android:drawableLeft="@drawable/ic_email_white_36dp"
+                android:drawablePadding="11dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="11dp"
+                android:scaleType="fitXY"
+                android:singleLine="true"
+                android:text="@string/SendBtn"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/SendIncidentBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/button1"
+                android:drawableLeft="@drawable/ic_email_white_36dp"
+                android:drawablePadding="11dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="11dp"
+                android:scaleType="fitXY"
+                android:singleLine="true"
+                android:text="@string/SendBtn"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/SendFakeIncidentBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/button1"
+                android:drawableLeft="@drawable/ic_email_white_36dp"
+                android:drawablePadding="11dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="11dp"
+                android:scaleType="fitXY"
+                android:singleLine="true"
+                android:text="@string/SendFakeBtn"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/MessageCenterBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/bg_button_messagecenter"
+                android:drawableLeft="@drawable/ic_forum_white_36dp"
+                android:drawablePadding="11dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="11dp"
+                android:scaleType="fitXY"
+                android:text="@string/my_message_center"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/GlossaryBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/button2"
+                android:drawableLeft="@drawable/ic_search_white_36dp"
+                android:drawablePadding="11dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="11dp"
+                android:scaleType="fitXY"
+                android:text="@string/glossary"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/HelpBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/button3"
+                android:drawableLeft="@drawable/ic_help_outline_white_36dp"
+                android:drawablePadding="11dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="11dp"
+                android:scaleType="fitXY"
+                android:text="@string/help_and_resources"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/locate_button"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/button4"
+                android:drawableLeft="@drawable/ic_adjust_white_36dp"
+                android:drawablePadding="11dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="11dp"
+                android:scaleType="fitXY"
+                android:text="@string/smart_button"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/emergency_dial"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/button5"
+                android:drawableLeft="@drawable/ic_phone_white_36dp"
+                android:drawablePadding="11dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="11dp"
+                android:scaleType="fitXY"
+                android:text="@string/emergency_dial"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/notificationBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/button6"
+                android:drawableLeft="@drawable/ic_warning_white_36dp"
+                android:drawablePadding="11dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="11dp"
+                android:scaleType="fitXY"
+                android:text="@string/notifications"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        android:text="@string/patent_notice"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_above="@+id/hours_of_op"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/red"
+        android:cropToPadding="false"
+        android:elevation="6dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_red_phone"
+        app:borderWidth="0dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

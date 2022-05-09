@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_background"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/blackLine"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/selectVideoButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_blue"
+        android:text="@string/selectVideoButton"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/selectPictureButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="75dp"
+            android:background="@drawable/button_select_image"
+            android:text="@string/selectPictureButton"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/skipButton"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:text="@string/generic_skip"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_red"
+            android:enabled="true"
+            />
+    </LinearLayout>
+
+
+    <!-- WE  are turning off capture image/video capture-->
+    <!--&lt;!&ndash; Capture picture button &ndash;&gt;-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btnCapturePicture"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:background="@color/btn_bg"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:paddingRight="20dp"-->
+    <!--android:text="@string/btnTakePicture"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:layout_below="@+id/blackLine" />-->
+    <!--&lt;!&ndash; Record video button &ndash;&gt;-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btnRecordVideo"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/btn_bg"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:paddingRight="20dp"-->
+    <!--android:text="@string/btnRecordVideo"-->
+    <!--android:textColor="@color/white" />-->
+
+
+</LinearLayout>

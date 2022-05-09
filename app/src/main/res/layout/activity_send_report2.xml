@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/light_gray_bg"
+    >
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:max="100"
+        android:progress="66"
+        android:progressTint="@color/btn_green"
+        android:progressBackgroundTint="@color/red"
+        android:layout_marginBottom="10dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        />
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/submitter_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmation" />
+
+        <TextView
+            android:id="@+id/confirmation_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/submitBtn1"
+            android:text="@string/code_format"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </TableRow>
+
+
+    <TextView
+        android:id="@+id/step3TextView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submitter_textView"
+        android:layout_marginTop="22dp"
+        android:text="@string/Help_text2" />
+
+    <EditText
+        android:id="@+id/encrypted_editText1"
+        android:hint="@string/email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step3TextView1"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:background="@drawable/bg_bordered_text"
+        android:layout_marginTop="7dp"
+        >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/encrypted_editText2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/encrypted_editText1"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/re_email"
+        android:inputType="textPassword"
+        android:background="@drawable/bg_bordered_text"
+        android:layout_marginTop="7dp"
+        />
+
+    <EditText
+        android:id="@+id/cellEditText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/encrypted_editText2"
+        android:ems="10"
+        android:hint="@string/cell_phone_number"
+        android:inputType="numberPassword"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:background="@drawable/bg_bordered_text"
+        android:layout_marginTop="7dp"
+        />
+
+    <TextView
+        android:id="@+id/step3TextView2"
+        android:layout_marginTop="39dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/encrypted_editText2"
+        android:text="@string/Help_text3"
+        />
+
+    <EditText
+        android:id="@+id/name_editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step3TextView2"
+        android:ems="10"
+        android:hint="@string/full_name"
+        android:inputType="text"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_bordered_text"
+        />
+
+    <EditText
+        android:id="@+id/email_editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_editText"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/bg_bordered_text"
+        android:layout_marginTop="7dp"
+        />
+
+
+    <EditText
+        android:id="@+id/cellEditText2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_editText"
+        android:ems="10"
+        android:hint="@string/cell_phone_number"
+        android:inputType="number"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:background="@drawable/bg_bordered_text"
+        android:layout_marginTop="7dp"
+        />
+
+
+
+    <Button
+        android:id="@+id/submitBtn1"
+        android:layout_width="167dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/submit_image_2"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

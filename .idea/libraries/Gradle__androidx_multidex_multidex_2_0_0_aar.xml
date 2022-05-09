@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.multidex:multidex:2.0.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/multidex-2.0.0.aar/7e97296b9a4ff12c6b9d93b8c02f0c54/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9efb2804207a8cb72c3b161fad243dbb/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3084343d78aefbba6eabeba67620018a/multidex-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/12f962d7c6ed67ac948dcb827cea32bd/multidex-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/acad8738d4eabcea0c962cdbd446364f/multidex-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/636be33c98461d1ea133afcf13ba7f32/multidex-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/660a11135132902f69d71aabdbb67b11/multidex-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4997f081d4a6debe00fce10e79d4b1aa/transformed/multidex-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b24aaf968e979a779bbacb86dc2aef0a/transformed/multidex-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/df7dc109ebd0859d9875e6eedb9ba9b9/transformed/multidex-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b365748f7b888e46d40ed0845d006159/transformed/multidex-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f8210d51c53447b2545ad2db16ddbcbf/transformed/multidex-2.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f8210d51c53447b2545ad2db16ddbcbf/transformed/multidex-2.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f8210d51c53447b2545ad2db16ddbcbf/transformed/multidex-2.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "522649466422",
+    "firebase_url": "https://big-oxygen-445.firebaseio.com",
+    "project_id": "big-oxygen-445",
+    "storage_bucket": "big-oxygen-445.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522649466422:android:d56c0dbaa36e0263",
+        "android_client_info": {
+          "package_name": "com.messagelogix.anonymousalerts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522649466422-n1votahbsmag6p3k120jgd7jlosribmv.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "522649466422.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4EEnk2n54lXiKI-3LOVP7Qm4DtkMUJ0w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522649466422-n1votahbsmag6p3k120jgd7jlosribmv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

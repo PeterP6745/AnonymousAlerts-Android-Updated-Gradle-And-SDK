@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_view_emergency_dial_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center_vertical"
+        android:background="@color/soft_blue"
+        android:textColor="@color/white"
+        android:paddingLeft="36dip"
+        android:paddingStart="36dip"
+        android:text="Emergency Telephone Number"
+        />
+
+</LinearLayout>
