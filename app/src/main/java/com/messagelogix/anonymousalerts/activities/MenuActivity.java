@@ -91,17 +91,20 @@ public class MenuActivity extends AppCompatActivity {
     private int lang_selected;
     private Resources resources;
 
+    Locale myLocale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+        String language = Preferences.getString(Config.LANGUAGE);
+        setLocale(language);
         //RelativeLayout show_lan_dialog;
 
         createDefaultNotificationChannel();
 
         setContext(this);
+
         setContentView(R.layout.activity_menu);
         setTitle(R.string.home);
 
@@ -116,7 +119,7 @@ public class MenuActivity extends AppCompatActivity {
 
         //set911 + initButtons()
         set911Dialer();
-        //initButtons();
+        initButtons();
 
         accountId = Preferences.getString(Config.ACCOUNT_ID);
         logoName = Preferences.getString(Config.LOGO_NAME);
@@ -1071,24 +1074,36 @@ public class MenuActivity extends AppCompatActivity {
                 int langpos = spinner1.getSelectedItemPosition();
                 switch(langpos) {
                     case 0: //English
-                        //PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("LANG", "en").commit();
+                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("LANG", "en").commit();
                         Preferences.putString("langCode", "en");
+                        Preferences.putString(Config.LANGUAGE,"en");
                         //setLangRecreate("en");
-                        changeLang("en");
+                        //changeLang("en");
+                        //setLocale("en");
+                        refreshAct();
+                        //recreate();
                         lang = "en";
                         return;
                     case 1: //Spanish
-                        //PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("LANG", "es").commit();
+                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("LANG", "es").commit();
                         Preferences.putString("langCode", "es");
+                        Preferences.putString(Config.LANGUAGE,"es");
                         //setLangRecreate("es");
-                        changeLang("es");
+                        //changeLang("es");
+                        //setLocale("es");
+                        refreshAct();
+                        //recreate();
                         lang = "es";
                         return;
                     case 2: //Vietnamese
                         PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("LANG", "vi").commit();
                         Preferences.putString("langCode", "vi");
+                        Preferences.putString(Config.LANGUAGE,"vi");
                         //setLangRecreate("vi");
-                        changeLang("vi");
+                        //changeLang("vi");
+                        //setLocale("vi");
+                        refreshAct();
+                        //recreate();
                         lang = "vi";
                         return;
                     /*case 3: //Arabic
@@ -1098,8 +1113,12 @@ public class MenuActivity extends AppCompatActivity {
                         return;*/
                     default: //By default set to english
                         PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("LANG", "en").commit();
+                        Preferences.putString(Config.LANGUAGE,"en");
                         //setLangRecreate("en");
-                        changeLang("en");
+                        //changeLang("en");
+                        //setLocale("en");
+                        refreshAct();
+                        //recreate();
                         lang = "en";
                         return;
                 }
@@ -1134,30 +1153,27 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(getIntent());
         Intent intent = new Intent(MenuActivity.this,MainActivity.class);
         startActivity(intent);
+        //Intent i = new Intent(context, MenuActivity.class);
+        //startActivity(i);
+        //finish();
     }
 
-    public void wipeStoredDataLists(){
-        Preferences.remove(Config.LANGUAGE);
-        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("LANG", "en").clear().commit();
-    }
-
-    public void changeLang(String langval){ //this will change the users language of choice throughout the app
-        Preferences.putString(Config.LANGUAGE,langval);
-        wipeStoredDataLists(); //wiping cached/stored data that is affected by language change
-//        Config.LANGUAGE=langval;
-        Log.d("languagecChange",langval);
-
-        Resources resources = getResources();
-        DisplayMetrics dm = resources.getDisplayMetrics();
-        Configuration config = getBaseContext().getResources().getConfiguration();
-        resources.updateConfiguration(config,dm);
-        Locale locale = new Locale(langval);
+    private void setLocale(String languageToLoad){
+        Locale locale;
+        if(languageToLoad.equals("not-set")){ //use any value for default
+            locale = Locale.getDefault();
+        }
+        else {
+            locale = new Locale(languageToLoad);
+        }
         Locale.setDefault(locale);
-        Log.d("languagecChange", String.valueOf(locale));
-        config.locale = locale;
-        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-        refreshAct(); //have to use this instead of recreate. recreate doesnt work due to structure of the tab bar and the activities contained.
-        //recreate();
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+        //config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        //initButtons();
+        System.out.println("Spawn: " + locale);
     }
 
     @Override

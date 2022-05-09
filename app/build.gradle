@@ -7,17 +7,23 @@ android {
         applicationId "com.messagelogix.anonymousalerts"
         minSdkVersion 24//16
         targetSdkVersion 30
-        versionCode 122
-        versionName "2.9.62"
+        versionCode 132
+        versionName "2.9.12"
 
         multiDexEnabled true
-        resConfigs "en" ,"es", "vi"
+        //resConfigs "en" ,"es", "vi"
     }
     
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    bundle {
+        language {
+            enableSplit = false
         }
     }
 
